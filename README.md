@@ -1,189 +1,136 @@
-# 🚀 BridgeUP AI
-# Dual-Portal AI-Powered Career Platform for Students & Recruiters
+# 🚀 BridgeUP AI  
+Dual-Portal AI-Powered Career Platform for Students & Recruiters  
 
-# BridgeUP AI is a full-stack career ecosystem where:
-# - Students build verified skill-based profiles
-# - Recruiters discover top candidates using AI & credit-based ranking
-# - Both sides meet on a real-time, data-driven talent marketplace
+BridgeUP AI is a full-stack career ecosystem where students build verified skill-based profiles and recruiters discover top candidates using AI and credit-based ranking.
 
-# 🌐 Live Experience
-# Glassmorphic Dual-Login → Student Portal → Recruiter Portal
-# Built for universities, bootcamps, and modern hiring teams
+---
 
-# 🧠 Core Philosophy
-# "Stop hiring based on resumes. Start hiring based on proof."
+## 🌐 Live Experience  
+Glassmorphic Dual-Login → Student Portal → Recruiter Portal  
 
-# 🏗️ System Architecture
-# Frontend:
-#   - Next.js 14 (App Router)
-#   - TailwindCSS + Glassmorphism UI
-#   - Drag & Drop (Kanban, Gallery)
-#   - Bento Grid Layouts
-#
-# Backend:
-#   - Supabase (Postgres + Auth + Storage)
-#   - Edge Functions (AI Scheduler)
-#   - Role-based Access Control
-#
-# AI Layer:
-#   - 7-Day Interview Prep Generator
-#   - Resume → Skill → Schedule Engine
-#   - Fallback logic for API safety
+Built for universities, bootcamps, and modern hiring teams.
 
-# 🔐 Authentication System
-# Dual-Portal Glassmorphic Login
-# - Student / Recruiter Toggle
-# - Email or Phone login
-# - Google OAuth
-# - GitHub OAuth
-# Users table is role-aware:
-#   users.role = "student" | "recruiter"
+---
 
-# 🎓 Student Portal
-# Sidebar Modules
-# - Internship Tracker (Kanban Board)
-# - Skill Library (15 University-Aligned Courses)
-# - Unified Calendar
-# - Proof Gallery
-# - Certificate Vault
-# - Mentor Connect
-# - Profile Editor (with Recruiter Preview)
+## 🧠 Core Philosophy  
+“Stop hiring based on resumes. Start hiring based on proof.”
 
-# Internship Tracker
-# Kanban Columns:
-#   Applied → Interview → Offer → Rejected
-# Drag & Drop powered by database sync
+---
 
-# Skill Library
-# - 15 curated courses
-# - University aligned
-# - Tracks skill acquisition in student_courses
+## 🏗 System Architecture  
 
-# Unified Calendar
-# Stores:
-#   - Exams
-#   - Hackathons
-#   - Internship deadlines
-#   - Mentor sessions
+### Frontend  
+- Next.js 14 (App Router)  
+- TailwindCSS + Glassmorphism UI  
+- Drag & Drop (Kanban, Gallery)  
+- Bento Grid Layouts  
 
-# Proof Gallery
-# Upload:
-#   - Project images
-#   - Contribution summary
-# Stored in:
-#   projects
-#   project_images
+### Backend  
+- Supabase (Postgres, Auth, Storage)  
+- Edge Functions (AI Scheduler)  
+- Role-based Access Control  
 
-# Certificate Vault
-# - Upload PDFs / Images
-# - Full-screen preview
-# - Stored in Supabase Storage
+### AI Layer  
+- 7-Day Interview Prep Generator  
+- Resume → Skill → Schedule Engine  
+- Fallback logic for API safety  
 
-# Mentor Connect
-# - Book real mentors
-# - 200-character agenda required
-# - Stored in mentor_bookings
+---
 
-# Profile Editor
-# Features:
-# - Avatar upload (max 5MB)
-# - Name / University / Bio (500 chars)
-# - Social Links:
-#     GitHub
-#     LinkedIn
-#     LeetCode
-#     GeeksForGeeks
-# - Real-time Recruiter Preview
-# - Edit / Preview toggle
-# - Save confirmation feedback
+## 🔐 Authentication  
+Dual-portal glassmorphic login with:  
+- Student / Recruiter toggle  
+- Email or Phone login  
+- Google OAuth  
+- GitHub OAuth  
 
-# 🧑‍💼 Recruiter Portal
-# Recruiters use credits to:
-# - Search candidates
-# - Unlock profiles
-# - Rank top talent
+Role-based access is controlled using `users.role`.
 
-# Candidate Search
-# Filters:
-#   - Skills
-#   - Courses
-#   - Project tags
-#   - Certificates
+---
 
-# Bento Grid Profiles
-# Each candidate shows:
-#   - Avatar
-#   - Skills
-#   - GitHub / LinkedIn / LeetCode
-#   - Certificates
-#   - Projects
-#   - Tags:
-#       Paid
-#       Unpaid
-#       Collaborative
+## 🎓 Student Portal  
 
-# Locked profiles require credits
+### Features  
+- Internship Tracker (Kanban board)  
+- Skill Library (15 university-aligned courses)  
+- Unified Calendar  
+- Proof Gallery  
+- Certificate Vault  
+- Mentor Connect  
+- Profile Editor with real-time recruiter preview  
 
-# 🧠 AI Interview Prep Engine
-# Edge Function:
-# - Generates a 7-day interview prep plan
-# - Based on:
-#     Skills
-#     Courses
-#     Target role
-# - Includes fallback logic if AI fails
+### Internship Tracker  
+Kanban columns:  
+Applied → Interview → Offer → Rejected  
 
-# 🗃 Database Schema
-# Tables:
-# - users
-# - courses
-# - student_courses
-# - applications
-# - projects
-# - project_images
-# - certificates
-# - calendar_events
-# - mentors
-# - mentor_bookings
+### Skill Library  
+Tracks enrolled courses using `student_courses`.
 
-# 🧪 Seed Data
-# Preloaded:
-# - 15 courses
-# - 6 mentors
-# - 8 students
-# - Projects + certificates
+### Proof Gallery  
+Students upload project images and contribution summaries.
 
-# 🧰 Setup Instructions
-git clone https://github.com/your-org/bridgeup-ai.git
-cd bridgeup-ai
+### Certificate Vault  
+Upload certificates with full-screen preview.
+
+### Mentor Connect  
+Students must enter a minimum 200-character agenda when booking.
+
+### Profile Editor  
+Includes avatar upload (5MB limit), bio (500 chars), and social links (GitHub, LinkedIn, LeetCode, GFG) with live recruiter preview.
+
+---
+
+## 🧑‍💼 Recruiter Portal  
+
+Recruiters use credits to unlock and rank candidates.
+
+### Candidate Discovery  
+Filter by skills, projects, and certificates.
+
+### Bento Grid Profiles  
+Each profile includes:
+- Skills  
+- GitHub, LinkedIn, LeetCode  
+- Certificates  
+- Projects  
+- Tags: Paid, Unpaid, Collaborative  
+
+Locked profiles require credits.
+
+---
+
+## 🧠 AI Interview Prep  
+An edge function generates a 7-day interview preparation plan based on the student’s skills and target role with fallback logic.
+
+---
+
+## 🗃 Database Schema  
+
+Tables:
+- users  
+- courses  
+- student_courses  
+- applications  
+- projects  
+- project_images  
+- certificates  
+- calendar_events  
+- mentors  
+- mentor_bookings  
+
+---
+
+## 🧪 Seed Data  
+Preloaded:
+- 15 courses  
+- 6 mentors  
+- 8 students with projects and certificates  
+
+---
+
+## 🧰 Setup  
+
+```bash
+git clone https://github.com/Shivam-droid-afk/BridgeUP-AI.git
+cd BridgeUP-AI
 npm install
-
-# Create .env.local
-# Add:
-# NEXT_PUBLIC_SUPABASE_URL=
-# NEXT_PUBLIC_SUPABASE_ANON_KEY=
-# OPENAI_API_KEY=
-
-npm run dev
-
-# 🚀 Deployment
-# Frontend:
-# - Vercel
-# Backend:
-# - Supabase
-# AI:
-# - Supabase Edge Functions
-
-# 🏆 Why BridgeUP AI Wins
-# Students:
-# - Build proof-based career profiles
-# - Prepare with AI
-# - Show real skills
-#
-# Recruiters:
-# - No resume spam
-# - Filter by verified data
-# - Pay only for high-quality leads
-
-# 🔥 BridgeUP AI
-# Where Talent Meets Truth
